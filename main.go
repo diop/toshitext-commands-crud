@@ -19,7 +19,7 @@ func handleRequests() {
 	myRouter.HandleFunc("/command/{name}/{instructions}", NewCommand).Methods("POST")
 	myRouter.HandleFunc("/command/{name}", DeleteCommand).Methods("DELETE")
 	myRouter.HandleFunc("/command/{name}/{instructions}", UpdateCommand).Methods("PUT")
-	log.Fatal(http.ListenAndServe(":8081", myRouter))
+	log.Fatal(http.ListenAndServe(":8080", myRouter))
 }
 
 func main() {
